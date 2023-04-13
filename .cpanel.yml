@@ -3,4 +3,3 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/kzzajgkh/public_html/
     - /bin/cp index.html $DEPLOYPATH
-    - /bin/rsync -av repositories/kzzador/ $DEPLOYPATH
