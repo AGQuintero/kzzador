@@ -6,9 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kzzador</title>
 </head>
-<body>
+<body onclick="fun_b()">
 
     <h3>INICIO 0025</h3>
+
+    <p id="para_1"></p>
+    <button onclick="fun_a()">URL</button>
+
+    <script>
+        function fun_a(){
+            url1 = document.URL;
+            document.getElementById("para_1").innerHTML = url1;
+        }
+        function fun_b(){
+            
+            actv_1 = document.activeElement.tagName;
+            document.getElementById("para_1").innerHTML = actv_1;
+        }
+    </script>
+
 
 </body>
 </html>
