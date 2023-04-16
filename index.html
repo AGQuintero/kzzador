@@ -6,39 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kzzador</title>
 </head>
-<body onclick="fun_b()">
+<body>
 
-    <h3>INICIO 0630</h3>
+    <h3>COMMIT 0710</h3>
 
 
-    <button onclick="fun_a()">URL</button>
-    <input type="text" value="entrada">
-    <p id="para_1"></p>
-    <p id="para_2"></p>
     <p id="demo"></p>
 
-
     <script>
-        document.addEventListener("click", fun_lis1);
-        document.addEventListener("click", fun_lis2);
+        document.addEventListener("mouseover", myFunction);
+        document.addEventListener("click", mySecondFunction);
+        document.addEventListener("mouseout", myThirdFunction);
 
-        function fun_a(){
-            let url1 = document.URL;
-            document.getElementById("para_1").innerHTML = url1;
+        function myFunction() {
+        document.getElementById("demo").innerHTML = "Moused over!"
         }
-        function fun_b(){
-            
-            const actv_1 = document.activeElement.tagName;
-            document.getElementById("para_2").innerHTML = actv_1;
+
+        function mySecondFunction() {
+        document.getElementById("demo").innerHTML = "Clicked!<br>"
         }
-        function fun_lis1(){
-            document.getElementById("demo").innerHTML += " =>";
-        }
-        function fun_lis2(){
-            document.getElementById("demo").innerHTML += "<= ";
+
+        function myThirdFunction() {
+        document.getElementById("demo").innerHTML = "Moused out!<br>"
         }
     </script>
-
-
 </body>
 </html>
