@@ -10,18 +10,19 @@
 
     <h3>INICIO 0116</h3>
 
+    <input type="text" value="entrada">
     <p id="para_1"></p>
     <p id="para_2"></p>
     <button onclick="fun_a()">URL</button>
 
     <script>
         function fun_a(){
-            url1 = document.URL;
+            let url1 = document.URL;
             document.getElementById("para_1").innerHTML = url1;
         }
         function fun_b(){
             
-            actv_1 = document.activeElement.tagName;
+            const actv_1 = document.activeElement.tagName;
             document.getElementById("para_2").innerHTML = actv_1;
         }
     </script>
