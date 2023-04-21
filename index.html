@@ -6,28 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kzzador</title>
 </head>
-<body>
+<body onmouseover="escucha_eve()">
 
-    <h3>COMMIT 0710</h3>
+    <h3>COMMIT 2023_04_21_0940</h3>
 
-
-    <p id="demo"></p>
-
+    <button id="btn_1" onclick="pone_diez()"></button>
+    <button id="btn_2" onclick="pone_diez()"></button>
+    <button id="btn_3" onclick="pone_diez()"></button><br>
+    <button id="btn_4" onclick="pone_diez()"></button>
+    <button id="btn_5" onclick="pone_diez()"></button>
+    <button id="btn_6" onclick="pone_diez()"></button><br>
+    <button id="btn_7" onclick="pone_diez()"></button>
+    <button id="btn_8" onclick="pone_diez()"></button>
+    <button id="btn_9" onclick="pone_diez()"></button><br>
+          
     <script>
-        document.addEventListener("mouseover", myFunction);
-        document.addEventListener("click", mySecondFunction);
-        document.addEventListener("mouseout", myThirdFunction);
+        let var_btn_1 = 10;
+        let var_btn_2 = 10;
+        let var_btn_3 = 10;
+        let var_btn_4 = 10;
+        let var_btn_5 = 10;
+        let var_btn_6 = 10;
+        let var_btn_7 = 10;
+        let var_btn_8 = 10;
+        let var_btn_9 = 10;
 
+        btn_1.innerHTML = var_btn_1;
+        btn_2.innerHTML = var_btn_2;
+        btn_3.innerHTML = var_btn_3;
+        btn_4.innerHTML = var_btn_4;
+        btn_5.innerHTML = var_btn_5;
+        btn_6.innerHTML = var_btn_6;
+        btn_7.innerHTML = var_btn_7;
+        btn_8.innerHTML = var_btn_8;
+        btn_9.innerHTML = var_btn_9;
+        
+        function escucha_eve() {
+            let btn_a = document.activeElement;
+
+            btn_a.addEventListener("mouseover", myFunction());
+            btn_a.addEventListener("click", pone_diez);
+            btn_a.addEventListener("mouseout", myFunction);
+        }
+          
         function myFunction() {
-        document.getElementById("demo").innerHTML = "Moused over!"
+            if (btn_a.innerHTML > 0) {
+                btn_a.innerHTML = btn_a.innerHTML-1;     
+            }
         }
-
-        function mySecondFunction() {
-        document.getElementById("demo").innerHTML = "Clicked!<br>"
-        }
-
-        function myThirdFunction() {
-        document.getElementById("demo").innerHTML = "Moused out!<br>"
+        function pone_diez() {
+            btn_a.innerHTML = 10;
         }
     </script>
 </body>
