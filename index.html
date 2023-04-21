@@ -6,22 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kzzador</title>
 </head>
-<body onmouseover="escucha_eve()">
+<body>
 
-    <h3>COMMIT 2023_04_21_0940</h3>
+    <h3>COMMIT 2023_04_21_1145</h3>
 
-    <button id="btn_1" onclick="pone_diez()"></button>
-    <button id="btn_2" onclick="pone_diez()"></button>
-    <button id="btn_3" onclick="pone_diez()"></button><br>
-    <button id="btn_4" onclick="pone_diez()"></button>
-    <button id="btn_5" onclick="pone_diez()"></button>
-    <button id="btn_6" onclick="pone_diez()"></button><br>
-    <button id="btn_7" onclick="pone_diez()"></button>
-    <button id="btn_8" onclick="pone_diez()"></button>
-    <button id="btn_9" onclick="pone_diez()"></button><br>
+    <button id="btn_1" onmouseover="myFunction(this)" onclick="pone_diez(this)">10</button>
+    <button id="btn_2" onmouseover="myFunction(this)" onclick="pone_diez(this)">10</button>
+    <button id="btn_3" onmouseover="myFunction(this)" onclick="pone_diez(this)">10</button><br>
+    <button id="btn_4" onmouseover="myFunction(this)" onclick="pone_diez(this)">10</button>
+    <button id="btn_5" onmouseover="myFunction(this)" onclick="pone_diez(this)">10</button>
+    <button id="btn_6" onmouseover="myFunction(this)" onclick="pone_diez(this)">10</button><br>
+    <button id="btn_7" onmouseover="myFunction(this)" onclick="pone_diez(this)">10</button>
+    <button id="btn_8" onmouseover="myFunction(this)" onclick="pone_diez(this)">10</button>
+    <button id="btn_9" onmouseover="myFunction(this)" onclick="pone_diez(this)">10</button><br>
           
     <script>
-        let var_btn_1 = 10;
+        let var_btn_1 = 5;
         let var_btn_2 = 10;
         let var_btn_3 = 10;
         let var_btn_4 = 10;
@@ -40,23 +40,17 @@
         btn_7.innerHTML = var_btn_7;
         btn_8.innerHTML = var_btn_8;
         btn_9.innerHTML = var_btn_9;
-        
-        function escucha_eve() {
-            let btn_a = document.activeElement;
-
-            btn_a.addEventListener("mouseover", myFunction());
-            btn_a.addEventListener("click", pone_diez);
-            btn_a.addEventListener("mouseout", myFunction);
-        }
-          
-        function myFunction() {
+                 
+        function myFunction(btn_a) {
             if (btn_a.innerHTML > 0) {
                 btn_a.innerHTML = btn_a.innerHTML-1;     
             }
         }
-        function pone_diez() {
+
+        function pone_diez(btn_a) {
             btn_a.innerHTML = 10;
         }
+
     </script>
 </body>
 </html>
